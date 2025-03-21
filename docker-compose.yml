@@ -1,0 +1,30 @@
+services:
+  rby1_sim:
+    build:
+      context: .
+      dockerfile: docker/sim.Dockerfile
+    container_name: rby1_sim_container
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    networks:
+      - robotnet
+    ports:
+      - "50051:50051"
+  rby1_control:
+    build:
+      context: .
+      dockerfile: docker/rby1_control.Dockerfile
+    container_name: rby1_control_container
+    command: bash
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/root
+    networks:
+      - robotnet
+
+networks:
+  robotnet:
+    driver: bridge
