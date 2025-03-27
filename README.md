@@ -1,6 +1,6 @@
 # Setup
 ```bash
-git clone --recursde-submodules https://github.com/ys-tommoro/RBY1.git
+git clone --recursde-submodules https://github.com/bys724/RBY1.git
 ```
 ```bash
 cd RBY1
