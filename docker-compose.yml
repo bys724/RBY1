@@ -21,7 +21,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ./:/root
+      - ./ros2_ws:/root/ros2_ws
     networks:
       - robotnet
 

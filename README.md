@@ -1,10 +1,18 @@
+# Setup
+```bash
+git clone --recursde-submodules https://github.com/ys-tommoro/RBY1.git
+```
+```bash
+cd RBY1
+```
+시뮬레이션 사용시 필수
+```bash
+xhost +local:docker
+```
 
 ## How to Run
 # 도커 환경 실행
-시뮬레이션 사용시 필수
-```bash
-xhost +local
-```
+
 도커 컨테이너 실행
 ```bash
 docker compose up --build
